@@ -1,7 +1,46 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/hilda.amp/Projects/BookmarkManager/spec/bookmark_test_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/hilda.amp/Projects/BookmarkManager/spec/bookmarks_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/hilda.amp/Projects/BookmarkManager/spec/testing_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
     },
-    "timestamp": 1595853572
+    "timestamp": 1595859402
   }
 }

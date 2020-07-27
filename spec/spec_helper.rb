@@ -3,11 +3,12 @@ ENV['RACK_ENV'] = 'test'
 require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
-# require './app.rb'
+ require 'rspec'
 
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
 #require File.expand_path('../app.rb', File.dirname(__FILE__))
 
-# Capybara.app = BookmarkManager
+Capybara.app = BookmarkManager
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,

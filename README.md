@@ -1,6 +1,7 @@
 # Bookmark Manager
 
-Primary goal
+Primary goal.
+
 By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
 
 **Can you build a web app that uses a database?**
@@ -21,3 +22,15 @@ Explain the basics of how databases work (e.g. tables, SQL, basic relationships)
 
 ### The project
 You're going to build a bookmark manager. A bookmark manager is a website to maintain a collection of bookmarks (URLs). You can use it to save a webpage you found useful. You can add tags to the webpages you saved to find them later. You can browse bookmarks other users have added. You can comment on the bookmarks.
+
+_User story_
+Stakeholder
+Motivation
+Task
+
+As a user,
+So I can identify the book marks made,
+I would like to view a list bookmarks created.
+
+MVC diagram
+[![Image from Gyazo](https://i.gyazo.com/6c6affc703c7cca802c1f9b86d28994d.png)](https://gyazo.com/6c6affc703c7cca802c1f9b86d28994d)
