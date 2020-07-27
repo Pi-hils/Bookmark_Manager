@@ -13,6 +13,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
@@ -20,6 +21,7 @@
       },
       "/Users/hilda.amp/Projects/BookmarkManager/spec/bookmarks_spec.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -41,6 +43,6 @@
         ]
       }
     },
-    "timestamp": 1595859402
+    "timestamp": 1595864058
   }
 }
