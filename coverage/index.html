@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.12.2/application.js' type='text/javascript'></script>
     <link href='./assets/0.12.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" type="image/png" href="./assets/0.12.2/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.12.2/favicon_red.png" />
     <link rel="icon" type="image/png" href="./assets/0.12.2/favicon.png" />
   </head>
 
@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-07-27T17:30:37+01:00">2020-07-27T17:30:37+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-07-28T15:14:22+01:00">2020-07-28T15:14:22+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,15 +22,15 @@
   <h2>
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
-      <span class="green">
-  100.0%
+      <span class="red">
+  69.23%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="red">
+         0.69
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>20</b> relevant lines,
-    <span class="green"><b>20</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed. </span>
-    (<span class="green">
-  100.0%
+    <b>26</b> relevant lines,
+    <span class="green"><b>18</b> lines covered</span> and
+    <span class="red"><b>8</b> lines missed. </span>
+    (<span class="red">
+  69.23%
 </span>
 )
   </div>
@@ -72,21 +72,21 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#3052801fa8a520448fa3456bb26be84e59e76a22" class="src_link" title="spec/bookmark_test_spec.rb">spec/bookmark_test_spec.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="red strong cell--number t-file__coverage">38.46 %</td>
+            <td class="cell--number">20</td>
+            <td class="cell--number">13</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">0.38</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#686df74d7d371ca07740c8f5d61f13de2bce84b0" class="src_link" title="spec/bookmarks_spec.rb">spec/bookmarks_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">7</td>
+            <td class="cell--number">13</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -124,8 +124,8 @@
   <div class="header">
     <h3>spec/bookmark_test_spec.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="red">
+  38.46%
 </span>
 
       lines covered
@@ -134,9 +134,9 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>13</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
     </div>
 
     
@@ -175,7 +175,7 @@
 
             
 
-            <code class="ruby">describe Bookmark do</code>
+            <code class="ruby">describe &#39;.all&#39; do</code>
           </li>
         </div>
       
@@ -186,7 +186,7 @@
 
             
 
-            <code class="ruby">  describe &#39;.all&#39; do</code>
+            <code class="ruby">    it &#39;returns all bookmarks&#39; do</code>
           </li>
         </div>
       
@@ -197,18 +197,18 @@
 
             
 
-            <code class="ruby">    it &#39;returns all bookmarks&#39; do</code>
+            <code class="ruby">      connection = PG.connect(dbname: &#39;bookmark_manager_test&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="6">
+            
             
 
             
 
-            <code class="ruby">      bookmarks = Bookmark.all</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -219,40 +219,40 @@
 
             
 
-            <code class="ruby">      expect(bookmarks).to include(&quot;https://www.diagram.codes&quot;)</code>
+            <code class="ruby">       connection.exec(&quot;INSERT INTO bookmarks(url) VALUES(1, &#39;https://www.diagram.codes&#39;);&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="8">
+            
             
 
             
 
-            <code class="ruby">      expect(bookmarks).to include(&quot;http://www.makersacademy.com&quot;)</code>
+            <code class="ruby">       connection.exec(&quot;INSERT INTO bookmarks (url) VALUES(2, &#39;http://www.makersacademy.com&#39;);&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="9">
+            
             
 
             
 
-            <code class="ruby">      expect(bookmarks).to include(&quot;http://www.twitter.com&quot;)</code>
+            <code class="ruby">       connection.exec(&quot;INSERT INTO bookmarks (url) VALUES(3, &#39;http://www.twitter.com&#39;);&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="10">
+            
             
 
             
 
-            <code class="ruby">      expect(bookmarks).to include(&quot;http://www.google.com&quot;)</code>
+            <code class="ruby">       connection.exec(&quot;INSERT INTO bookmarks (url) VALUES(4, &#39;http://www.google.com&#39;);&quot;)</code>
           </li>
         </div>
       
@@ -263,18 +263,18 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="missed" data-hits="0" data-linenumber="12">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      bookmarks = Bookmark.all</code>
           </li>
         </div>
       
@@ -290,13 +290,79 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="missed" data-hits="0" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">      expect(bookmarks).to include(&quot;https://www.diagram.codes&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">      expect(bookmarks).to include(&quot;http://www.makersacademy.com&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">      expect(bookmarks).to include(&quot;http://www.twitter.com&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">      expect(bookmarks).to include(&quot;http://www.google.com&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 
             
 
             <code class="ruby">end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -319,8 +385,8 @@
     
 
     <div class="t-line-summary">
-      <b>7</b> relevant lines.
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -332,7 +398,18 @@
     <ol>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="1">
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby"> require &#39;pg&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
             
             
 
@@ -343,24 +420,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">feature &quot;viewing bookmark&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="covered" data-hits="1" data-linenumber="3">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    scenario &quot;to get bookmarks&quot; do</code>
+            <code class="ruby">feature &quot;viewing bookmarks&quot; do</code>
           </li>
         </div>
       
@@ -371,7 +437,7 @@
 
             
 
-            <code class="ruby">        visit (&#39;/bookmarks&#39;)</code>
+            <code class="ruby">    scenario &quot;to get bookmarks&quot; do</code>
           </li>
         </div>
       
@@ -382,7 +448,7 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;https://www.diagram.codes&quot;)</code>
+            <code class="ruby">      connection = PG.connect(dbname: &#39;bookmark_manager_test&#39;)</code>
           </li>
         </div>
       
@@ -393,18 +459,18 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;http://www.makersacademy.com&quot;)</code>
+            <code class="ruby">        visit (&#39;/bookmarks&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="7">
+            
             
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;http://www.twitter.com&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -415,12 +481,45 @@
 
             
 
+            <code class="ruby">        expect(page).to have_content(&quot;https://www.diagram.codes&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;http://www.makersacademy.com&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;http://www.twitter.com&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">        expect(page).to have_content(&quot;http://www.google.com&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -431,7 +530,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
