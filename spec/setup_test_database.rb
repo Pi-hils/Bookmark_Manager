@@ -1,7 +1,8 @@
-# require 'pg'
+require 'pg'
 
-# p "Setting up test Database"
+p "Setting up test Database"
 
-# connection = PG.connect(dbnname: 'bookmark_manager_test')
+ connection = PG.connect(dbnname: 'bookmark_manager_test')
 
-# connection.exec("TRUNCATE bookmarks;")
+ #To clear the bookmark table using PSQL Truncate command
+ connection.exec("TRUNCATE bookmarks;")

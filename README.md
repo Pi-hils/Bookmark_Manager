@@ -29,6 +29,10 @@ You're going to build a bookmark manager. A bookmark manager is a website to mai
 2. Create the database using the psql command CREATE DATABASE bookmark_manager;
 3. Connect to the database using the pqsl command \c bookmark_manager;
 4. Run the query we have saved in the file 01_create_bookmarks_table.sql
+5. Install [TablePlus](https://tableplus.com/)
+6. Create Database for bookmark_manager_test & CREATE TABLE bookmarks;
+
+
 
 _User story_
 Stakeholder
