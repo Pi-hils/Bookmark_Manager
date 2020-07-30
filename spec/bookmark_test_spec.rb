@@ -3,6 +3,7 @@ require './lib/bookmark'
 describe Bookmark do
   describe '.all' do
     it 'returns all bookmarks' do
+
       connection = PG.connect(dbname: 'bookmark_manager_test')
 
         connection.exec("INSERT INTO bookmarks (url) VALUES('https://www.diagram.codes');")
@@ -18,5 +19,14 @@ describe Bookmark do
       expect(bookmarks).to include("http://www.google.com")
     end
   end
+
+  describe '.create' do
+    it 'creates a new bookmark' do
+      Bookmark.create(url: 'http://www.newbookmark.com')
+
+      expect(Bookmark.all).to include 'http://www.newbookmark.com'
+    end
+  end
+
 end
 

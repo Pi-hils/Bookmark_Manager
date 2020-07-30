@@ -35,13 +35,17 @@ You're going to build a bookmark manager. A bookmark manager is a website to mai
 
 
 _User story_
-Stakeholder
-Motivation
-Task
+1. Stakeholder
+2. Motivation
+3. Task
 
-As a user,
-So I can identify the book marks made,
-I would like to view a list bookmarks created.
+As a user, <br>
+So I can identify the bookmarks made, <br>
+I would like to view a list bookmarks created. <br>
+
+As a user,  <br>
+So I can save some useful links, <br>
+I would like to add new bookmarks <br>
 
 MVC diagram
 [![Image from Gyazo](https://i.gyazo.com/6c6affc703c7cca802c1f9b86d28994d.png)](https://gyazo.com/6c6affc703c7cca802c1f9b86d28994d)

@@ -1,10 +1,16 @@
-#require_relative './setup_test_database'
+require_relative './setup_test_database'
 
 ENV['ENVIRONMENT'] = 'test'
 
+RSpec.configure do |config|
+  config.before(:each) do
+    :setup_test_database
+  end
+end
+
 require 'capybara/rspec'
- require 'rspec'
-  require 'pg'
+require 'rspec'
+require 'pg'
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 #require File.expand_path('../app.rb', File.dirname(__FILE__))
@@ -20,11 +26,7 @@ Capybara.app = BookmarkManager
 
 # For accurate test coverage measurements, require your code AFTER 'SimpleCov.start'
 
-# RSpec.configure do |config|
-#   config.before(:each) do
-#     setup_test_database
-#   end
-# end
+
 
 # RSpec.configure do |config|
 #   config.after(:suite) do
