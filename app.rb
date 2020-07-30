@@ -9,24 +9,23 @@ class BookmarkManager < Sinatra::Base
     get '/bookmarks' do
         # p ENV
         @bookmarks = Bookmark.all
+     p @bookmarks.first.url
+
         erb :bookmarks
     end
 
-    get '/new' do
+    get '/bookmarks/new' do
       erb :new
     end
 
     post '/bookmarks' do
-        Bookmark.create(url: params[:url])
-        # url = params['url']
-        # connection = PG.connnect(dbname: 'bookmark_manager_test')
-        # connection = PG.connect("INSERT INTO bookmarks (url) VALUES('#{url}')")
+        Bookmark.create(url: params[:url], title: params[:title])
         redirect '/bookmarks'
     end
 
-    post '/bookmarks' do
-      Bookmark.create(url)
-    end
+    # post '/bookmarks' do
+    #   Bookmark.create(url)
+    # end
 
     run! if app_file == $0
 end
