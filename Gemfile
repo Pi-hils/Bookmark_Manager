@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
-  gem 'pg'
-
 
 group :test do
   gem 'capybara'
+  gem 'pg'
   gem 'rspec'
-  gem 'sinatra'
   gem 'rubocop', '0.79.0'
+  gem 'sinatra'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
 end
