@@ -14,4 +14,6 @@ feature "viewing bookmarks" do
         expect(page).to have_link('Twitter', href: "http://www.twitter.com")
         expect(page).to have_link('Google', href: "http://www.google.com")
     end
+
+    
 end

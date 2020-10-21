@@ -1,37 +1,18 @@
 # Bookmark Manager
 
-Primary goal.
-
-By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
-
-**Can you build a web app that uses a database?**
-
-By the end of the project, you can:
-
-Build a simple web app with a database (this pirmary goal breaks down into the two sub-goals below)
-Follow an effective debugging process for database applications
-Explain the basics of how databases work (e.g. tables, SQL, basic relationships)
-
-## Main focuses for this week
-- Agile and TDD
-- Engineering and 'Dev Recipes'
-- Databases
-- Tooling
-- As well as these things, you'll deepen your understanding of many of the skills and concepts from week 3.
-
-
-### The project
-You're going to build a bookmark manager. A bookmark manager is a website to maintain a collection of bookmarks (URLs). You can use it to save a webpage you found useful. You can add tags to the webpages you saved to find them later. You can browse bookmarks other users have added. You can comment on the bookmarks.
-
-## To start
+## Getting Database setup
 
 1. Connect to psql
-2. Create the database using the psql command CREATE DATABASE bookmark_manager;
-3. Connect to the database using the pqsl command \c bookmark_manager;
+2. Create the database(db) using the psql command CREATE DATABASE bookmark_manager;
+3. Connect to the db using the pqsl command \c bookmark_manager;
 4. Run the query we have saved in the file 01_create_bookmarks_table.sql
 5. Install [TablePlus](https://tableplus.com/)
 6. Create Database for bookmark_manager_test & CREATE TABLE bookmarks;
 
+## Add Title Column added to dev db
+1. Connect to psql in terminal
+2. Connect to the db, ie \c bookmark_manager; (to connect to the nnecessary db)
+3. Use **ALTER TABLE** table_name **ADD COLUMN** new_column_name **VARCHAR(no. of chars e.g 50);**
 
 
 _User story_
@@ -47,5 +28,14 @@ As a user,  <br>
 So I can save some useful links, <br>
 I would like to add new bookmarks <br>
 
-MVC diagram
+As a user,<br>
+So I can see what changed <br>
+I would like to update my bookmarks<br>
+
+1st attempt of MVC diagram
 [![Image from Gyazo](https://i.gyazo.com/6c6affc703c7cca802c1f9b86d28994d.png)](https://gyazo.com/6c6affc703c7cca802c1f9b86d28994d)
+
+- When the user visits the '/bookmarks' (client) path, their browser sends a request to a controller(app).
+- When the controller(app) gets the request, it asks the Bookmark class to give it all the bookmarks, i.e. the controller asks for Bookmark.all.
+- The Bookmark **class** goes and gets the bookmarks(in the lib folder), and gives back all the bookmarks in an array to the controller.
+- The **controller** renders the array of bookmarks to a webpage, which it sends as a response to the user
